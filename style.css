@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:hsl(30, 38%, 92%);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -175px;
+    margin-top: -305px; 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.card__img--mobile {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 240px;
+}
+
+.card__img--desktop {
+    border-radius: 10px 0 0 10px;
+    display: none;
+}
+
+.card__body {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 370px;
+    padding: 25px;
+    border-radius: 0 0 10px 10px;
+}
+
+.card__header {
+    font-family: 'Fraunces', serif;
+}
+
+.card__txt {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5em;
+    letter-spacing: 0.03em;
+    color: hsl(228, 12%, 48%);
+}
+
+.card__txt--spaced {
+    letter-spacing: 0.3em;
+}
+
+.card__prices {
+    display: flex;
+    align-items: center;
+}
+
+
+.card__price-off {
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+}
+
+.card__price-line {
+    margin-left: 20px;
+}
+
+.button {
+    background-color: hsl(158, 36%, 37%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 90px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: space-around;
+    cursor:pointer;
+}
+
+.button:active {
+    background-color:hsl(158, 36%, 29%);
+}
+
+@media(min-width:1440px) {
+    .container {
+        margin-left: -300px;
+        margin-top: -225px; 
+    }
+    .card {
+        flex-direction: row;
+        width: 600px;
+        height: 450px;
+    }
+    .card__body {
+        height: 450px;
+        border-radius: 0 10px 10px 0;
+    }
+    .card__img--mobile {
+        display: none;
+    }
+    .card__img--desktop {
+        display: block;
+    }
+    .button {
+        padding: 15px 60px;
+        height: 45px;
+        justify-content: space-evenly;
+    }
+    .card__header {
+        letter-spacing: .04em;
+    }
+}
