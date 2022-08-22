@@ -7,15 +7,11 @@
 }
 
 body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
     background-color:hsl(30, 38%, 92%);
-}
-
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -175px;
-    margin-top: -305px; 
 }
 
 .card {
@@ -46,7 +42,9 @@ body {
 }
 
 .card__header {
+    font-size: 2em;
     font-family: 'Fraunces', serif;
+    letter-spacing: .03em;
 }
 
 .card__txt {
@@ -61,6 +59,10 @@ body {
     letter-spacing: 0.3em;
 }
 
+.card__txt--uppercase {
+    text-transform: uppercase;
+}
+
 .card__prices {
     display: flex;
     align-items: center;
@@ -73,32 +75,35 @@ body {
     font-size: 30px;
 }
 
-.card__price-line {
+.card__price-line-through {
+    text-decoration: line-through;
     margin-left: 20px;
 }
 
-.button {
+.btn {
+    height:48px;
     background-color: hsl(158, 36%, 37%);
     color: #fff;
     border: none;
     border-radius: 10px;
-    padding: 15px 90px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    display: inline-flex;
-    justify-content: space-around;
     cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
-.button:active {
+.btn:hover {
     background-color:hsl(158, 36%, 29%);
 }
 
+.btn__cart-icon {
+    background-image: url(images/icon-cart.svg) no-repeat;
+}
+
 @media(min-width:1440px) {
-    .container {
-        margin-left: -300px;
-        margin-top: -225px; 
-    }
     .card {
         flex-direction: row;
         width: 600px;
@@ -113,13 +118,5 @@ body {
     }
     .card__img--desktop {
         display: block;
-    }
-    .button {
-        padding: 15px 60px;
-        height: 45px;
-        justify-content: space-evenly;
-    }
-    .card__header {
-        letter-spacing: .04em;
     }
 }
